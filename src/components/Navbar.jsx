@@ -1,9 +1,10 @@
 import React from "react";
+import logo from "../assets/Images/image.png";
 
 export default function Navbar() {
   return (
     <nav>
-      <img src="../assets/Images/image.png" className="nav--logo" />
+      <img src={logo} className="nav--logo" />
     </nav>
   );
 }
