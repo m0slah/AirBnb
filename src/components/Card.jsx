@@ -1,7 +1,7 @@
 import swim from "../assets/Images/swim.png";
 import star from "../assets/Images/star.png";
 
-export default function Card() {
+export default function Card(props) {
   return (
     <div className="card">
       <img src={swim} className="card--image" alt="Main card image." />
