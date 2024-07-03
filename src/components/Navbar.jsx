@@ -3,7 +3,7 @@ import React from "react";
 export default function Navbar() {
   return (
     <nav>
-      <img src="../assets/image.png" className="nav--logo" />
+      <img src="../assets/Images/image.png" className="nav--logo" />
     </nav>
   );
 }
