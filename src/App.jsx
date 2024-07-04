@@ -2,23 +2,33 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
+import swim from "./assets/Images/swim.png"; // Import the image here
+
 /*
-Challenge: Build the Hero component.
-Check the Figma file for the design specifics.
+Challenge: Pass props to the Card component and display that data
+
+- img ("katie-zaferes.png")
+- rating ("5.0")
+- reviewCount (6)
+- country (Whatever you want)
+- title ("Life Lessons with Katie Zaferes")
+- price (136)
+
 */
 
 export default function App() {
-  const date = new Date();
-  const hours = date.getHours();
-  let timeOfDay;
-
-  if (hours < 12) {
-    timeOfDay = "morning";
-  } else if (hours >= 12 && hours < 17) {
-    timeOfDay = "afternoon";
-  } else {
-    timeOfDay = "night";
-  }
-
-  return <h1>Good {timeOfDay}!</h1>;
+  // <Hero />
+  return (
+    <div>
+      <Navbar />
+      <Card
+        img={swim}
+        rating="5.0"
+        reviewCount="6"
+        country="Iraq"
+        title="Life Lessons with Katie Zaferes"
+        price="136"
+      />
+    </div>
+  );
 }
