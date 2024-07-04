@@ -2,33 +2,22 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
-import swim from "./assets/Images/swim.png"; // Import the image here
-
-/*
-Challenge: Pass props to the Card component and display that data
-
-- img ("katie-zaferes.png")
-- rating ("5.0")
-- reviewCount (6)
-- country (Whatever you want)
-- title ("Life Lessons with Katie Zaferes")
-- price (136)
-
-*/
+import data from "./data.js";
 
 export default function App() {
-  // <Hero />
-  return (
-    <div>
+  const cardData = data.map((item) => (
+    <div key={item.id}>
       <Navbar />
       <Card
-        img={swim}
-        rating="5.0"
-        reviewCount="6"
-        country="Iraq"
-        title="Life Lessons with Katie Zaferes"
-        price="136"
+        coverImg={item.coverImg} // Assuming `swim` is your imported image source
+        rating={item.rating} // Example: dynamically use rating from data
+        reviewCount={item.reviewCount} // Example: dynamically use review count from data
+        country={item.country} // Example: dynamically use country from data
+        title={item.title} // Example: dynamically use title from data
+        price={item.price} // Example: dynamically use price from data
       />
     </div>
-  );
+  ));
+
+  return <div>{cardData}</div>;
 }

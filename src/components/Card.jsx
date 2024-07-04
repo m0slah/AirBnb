@@ -1,7 +1,7 @@
 import star from "../assets/Images/star.png";
 
 export default function Card({
-  img,
+  coverImg,
   rating,
   reviewCount,
   country,
@@ -10,7 +10,11 @@ export default function Card({
 }) {
   return (
     <div className="card">
-      <img src={img} className="card--image" alt="Main card image." />
+      <img
+        src={`../images/${coverImg}`}
+        className="card--image"
+        alt="Main card image."
+      />
       <div className="card--stats">
         <img src={star} className="card--star" alt="Star icon." />
         <span>{rating}</span>
