@@ -15,6 +15,7 @@ export default function App() {
         location={item.location}
         title={item.title}
         price={item.price}
+        openSpots={item.openSpots}
       />
     );
   });
@@ -22,7 +23,7 @@ export default function App() {
   return (
     <div>
       <Navbar />
-      {/* <Hero /> */}
+      <Hero />
       <section className="cards-list">{cards}</section>
     </div>
   );
